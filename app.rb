@@ -17,6 +17,8 @@ get "/" do
 end
 
 get '/homepage' do
+  @user = User.find(session[:user_id])
+  @posts = Post.all
   erb :homepage
 end
 
@@ -38,3 +40,10 @@ post "/login" do
   end
   redirect "/"
 end
+
+post "/post" do
+  @post = Post.new(text: params[:text], subject: params[:subject], user_id: session[:user_id])
+  @post.save
+  redirect "/homepage"
+end
+

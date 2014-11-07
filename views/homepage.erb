@@ -8,12 +8,12 @@
 <header>
 	<div class="navbar2">
 		<img src="us-logo.png" class="logo2">
-			<ul>
-				<li>Welcome, @User
-				<li><a href="/homepage.erb">Home</a>
-				<li><a href="/profile.erb">Profile</a>
-				<li><a href="/connections.erb">Connections</a>
-				<li><a href="logout">Log Out</a>
+			<ul class="navul">
+				<li class="navli">Welcome, <%= @user.fname %>
+				<li class="navli"><a href="/homepage.erb">Home</a>
+				<li class="navli"><a href="/profile.erb">Profile</a>
+				<li class="navli"><a href="/connections.erb">Connections</a>
+				<li class="navli"><a href="logout">Log Out</a>
 			</ul>
 	</div>
 </header>	
@@ -21,22 +21,29 @@
 	<div class="bodycontainer">	
 		<div class="bodyleftcontainer">
 			<div class="profilephoto">
-				Enter profile photo here
 			</div>
 			<div class="namedisplay">
-				NAME
-			</div>
-			<div class="shareupdate">
-
+				<h2>
+					<%= @user.fname %> <%= @user.lname %>
+				</h2>
 			</div>
 		</div>
 
 		<div class="bodyrightcontainer">
-			<div class="communityposts">
-				COMMUNITY POSTS
+			<div class="shareupdate">
+				<form method="post" action="/post">
+					<input type="text" name="text" placeholder="Share an update or an upcoming ski trip...." class="resizedposttextbox">
+					<input type="submit" value="post" id="post" />
+				</form>
 			</div>
 			<div class="communityfeed">
-				COMMUNITY FEED
+				<% if @posts %>
+				<ul>
+					<% @posts.each do |post| %>
+					<li class="communityposts"><%= post.user.fname %> <%= post.user.lname %> <%= post.text %> </li>
+					<% end %>
+				</ul>
+				<% end %>
 			</div>
 		</div>
 	</div>
