@@ -155,4 +155,75 @@ h2 {
 li {
 	display: inline-block;
 	font-size: 30px;
+	color: #fff;
+	padding: 50px;
 }
+ul {
+	position: absolute;
+	margin-left: 30px;
+	margin-top: -95px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+.navbar2 {
+	width: 100%;
+	height: 75px;
+	background-color: #000;
+	display: inline-block;
+}
+.logo2 {
+	width: 75px;
+	height: 75px;
+	display: inline-block;
+}
+a:hover {
+	text-decoration: underline;
+	background: url("http://tribwxin.files.wordpress.com/2013/12/snow-2.jpg");
+	color: #fff;
+}
+.bodycontainer {
+	width: 1000px;
+	margin: 0 auto;
+}
+.bodyleftcontainer {
+	width: 300px;
+	height: 800px;
+	float: left;
+}
+.bodyrightcontainer {
+	width: 600px;
+	float: right;
+	height: 800px;
+	margin-right: 50px;
+}
+.profilephoto {
+	width: 150px;
+	height: 150px;
+	background-color: #fff;
+	float: left;
+}
+.namedisplay {
+	width: 125px;
+	height: 50px;
+	background-color: #fff;
+	float: right;
+}
+.communityposts {
+	width: 600px;
+	height: 100px;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+.communityfeed {
+	width: 600px;
+	height: 400px;
+	background-color: #fff;
+}
+
+
+
+
+
+
