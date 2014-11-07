@@ -16,6 +16,17 @@ get "/" do
   erb :index
 end
 
+get '/homepage' do
+  erb :homepage
+end
+
+post "/joinnow" do
+  @user = User.new(params)
+  @user.save
+  redirect "/"
+end
+
+
 post "/login" do
   @user = User.where(email: params[:email]).first
   if @user && @user.password == params[:password]

@@ -1,0 +1,71 @@
+body {
+	background: url("wallpaper.jpg");
+}
+.navbar {
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+}
+.introdiv {
+	width: 900px;
+	height: 90px;
+	background-color: #fff;
+	position: relative;
+	margin: 0 auto;
+	position: center;
+	top: -20px;
+}
+.frontcontainer {
+	width: 900px;
+	margin: 0 auto;
+}
+.frontphoto {
+	height: 400px;
+	width: 500px;
+	background-color: #fff;
+	float: left;
+	border: 4px solid white;
+	position: relative;
+}
+h1 {
+	font-family: Candara;
+	font-size: 72px;
+}
+.signupnow {
+	width: 380px;
+	height: 80px;
+	background-color: #fff;
+	float: right;
+}
+h2 {
+	font-family: Candara;
+	font-size: 60px;
+	margin: 0px;
+	text-align: center;
+}
+.firstname {
+	width: 180px;
+	height: 40px;
+	background-color: #fff;
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+}
+.lastname {
+	width: 180px;
+	height: 40px;
+	background-color: #fff;
+	float: right;
+	display: inline-block;
+	margin-top: 10px;
+}
+.signupwrapper {
+	width: 380px;
+	float: right;
+}
+.email {
+	width: 360px;
+	height: 40px;
+	background-color: #fff;
+	margin-top: 10px;
+}
