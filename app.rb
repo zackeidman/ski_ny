@@ -32,6 +32,7 @@ post "/login" do
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
     flash[:notice] = "Great You got in!"
+    redirect "/homepage"
   else
     flash[:notice] = "Invalid Attempt"
   end

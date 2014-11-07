@@ -182,6 +182,7 @@ a:hover {
 	text-decoration: underline;
 	background: url("http://tribwxin.files.wordpress.com/2013/12/snow-2.jpg");
 	color: #fff;
+	border-radius: 10px;
 }
 .bodycontainer {
 	width: 1000px;
@@ -189,13 +190,13 @@ a:hover {
 }
 .bodyleftcontainer {
 	width: 300px;
-	height: 800px;
+	height: 600px;
 	float: left;
 }
 .bodyrightcontainer {
 	width: 600px;
 	float: right;
-	height: 800px;
+	height: 600px;
 	margin-right: 50px;
 }
 .profilephoto {

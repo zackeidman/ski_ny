@@ -12,17 +12,22 @@
 			URBAN SHREDDERS
 		</h2>
 			<div class="email">
-				<form>
-					<input type="text" name="email" placeholder="Email">
+				<form method="post" action="/login" >
+					<input 
+					  type="text" 
+					  name="email" 
+					  placeholder="Email">
+				</div>	
+				<div class="password">
+					<input 
+					type="password" 
+					name="password" 
+					placeholder="Password">
+				</div>
+				<div class="loginbutton">
+					<input type="submit" name="login" value="Log In" id="loginbutton" />
+				</div>	
 				</form>
-			</div>	
-			<div class="password">
-				<form>
-					<input type="text" name="password" placeholder="Password">
-				</form>
-			</div>
-			<div class="loginbutton">
-				<input type="submit" name="submit" value="Log In" id="loginbutton" />
 			</div>	
 	</div>
 </header>	
@@ -33,7 +38,7 @@
 	<div class="frontcontainer">
 		<img src="photo1.jpg" class="frontphoto">
 		<div class="signupwrapper">	
-			<form method="post" action="/joinnow">
+			<form method="post" action="/login">
 				<div class="signupnow">
 					<h2 class="signup">Sign up now</h2>
 				</div>
