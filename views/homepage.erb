@@ -10,10 +10,10 @@
 		<img src="us-logo.png" class="logo2">
 			<ul class="navul">
 				<li class="navli">Welcome, <%= @user.fname %>
-				<li class="navli"><a href="/homepage.erb">Home</a>
-				<li class="navli"><a href="/profile.erb">Profile</a>
-				<li class="navli"><a href="/connections.erb">Connections</a>
-				<li class="navli"><a href="logout">Log Out</a>
+				<li class="navli"><a href="/homepage">Home</a>
+				<li class="navli"><a href="/profile">Profile</a>
+				<li class="navli"><a href="/connections">Connections</a>
+				<li class="navli"><a href="/">Log Out</a>
 			</ul>
 	</div>
 </header>	
@@ -40,7 +40,11 @@
 				<% if @posts %>
 				<ul>
 					<% @posts.each do |post| %>
-					<li class="communityposts"><%= post.user.fname %> <%= post.user.lname %> <%= post.text %> </li>
+					<li class="communityposts">
+						<b><%= post.user.fname %> <%= post.user.lname %> posted on </b>
+						<br> <%= post.text %> 
+						<br> <a href=<%= "/post/#{ post.id }/delete" %> class="delete">Delete</a>
+					</li>
 					<% end %>
 				</ul>
 				<% end %>

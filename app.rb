@@ -44,6 +44,14 @@ end
 post "/post" do
   @post = Post.new(text: params[:text], subject: params[:subject], user_id: session[:user_id])
   @post.save
+
   redirect "/homepage"
 end
+
+get "/post/:id/delete" do
+  p params 
+  redirect "/homepage"
+end
+
+
 
